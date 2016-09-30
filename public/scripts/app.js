@@ -11,4 +11,6 @@ $(function(){
 	Backbone.history.start({pushState: false});
 
 	r.navigate("/login", {trigger: true, replace: true});
+
+	console.log('hello world');
 })
