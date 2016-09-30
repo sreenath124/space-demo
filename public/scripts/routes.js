@@ -4,6 +4,7 @@ var $ = require('jquery');
 var Login = require('./view/Login.js');
 var User = require('./model/User.js');
 
+
 module.exports = Backbone.Router.extend({
     initialize: function (options) {
     },
@@ -22,6 +23,7 @@ module.exports = Backbone.Router.extend({
     },
 
     home: function(query, page) {
+        console.log('in home');
         // ...
     }
 });
