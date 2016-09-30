@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js -w",
-    "build": "webpack --config webpack.config.js"
+    "start": "nodemon --config nodemon.json server.js -w",
+    "watch": "webpack --config webpack.config.js --progress --colors --watch"
   },
   "author": "",
   "license": "ISC",

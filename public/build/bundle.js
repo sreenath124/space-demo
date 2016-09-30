@@ -48,8 +48,15 @@
 	var _ = __webpack_require__(2);
 	var $ = __webpack_require__(3);
 
-	$(document).ready(function() {
+	var Router = __webpack_require__(4);
+
+	$(function(){
 		console.log('hello');
+
+		var r = new Router({});
+		Backbone.history.start({pushState: false});
+
+		r.navigate("/login", {trigger: true, replace: true});
 	})
 
 /***/ },
@@ -13758,6 +13765,51 @@
 	return jQuery;
 	} );
 
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Backbone = __webpack_require__(1);
+	var $ = __webpack_require__(3);
+
+	var Login = __webpack_require__(5);
+
+	module.exports = Backbone.Router.extend({
+	    initialize: function (options) {
+	    },
+
+	    routes: {
+	        "login": "login",
+	        "home": "home",
+	    },
+
+	    login: function() {
+	        console.log('in login');
+
+	        var login = new Login({});
+	        $('#app').html( login.render().$el );
+	    },
+
+	    home: function(query, page) {
+	        // ...
+	    }
+	});
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Backbone = __webpack_require__(1);
+	var $ = __webpack_require__(3);
+
+	module.exports = Backbone.View.extend({
+		render: function() {
+			this.$el.html( $('<p>In login</p>') );
+
+			return this;
+		}
+	})
 
 /***/ }
 /******/ ]);

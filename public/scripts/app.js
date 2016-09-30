@@ -2,6 +2,13 @@ var Backbone = require('backbone');
 var _ = require('underscore');
 var $ = require('jquery');
 
-$(document).ready(function() {
+var Router = require('./routes');
+
+$(function(){
 	console.log('hello');
+
+	var r = new Router({});
+	Backbone.history.start({pushState: false});
+
+	r.navigate("/login", {trigger: true, replace: true});
 })
