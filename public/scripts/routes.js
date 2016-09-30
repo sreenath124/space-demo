@@ -2,6 +2,7 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 
 var Login = require('./view/Login.js');
+var User = require('./model/User.js');
 
 module.exports = Backbone.Router.extend({
     initialize: function (options) {
@@ -15,8 +16,9 @@ module.exports = Backbone.Router.extend({
     login: function() {
         console.log('in login');
 
-        var login = new Login({});
-        $('#app').html( login.render().$el );
+        app.login = new Login({ model: app.user });
+
+        app.node.html( app.login.render().$el );
     },
 
     home: function(query, page) {
