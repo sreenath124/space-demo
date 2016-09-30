@@ -6,7 +6,10 @@ var User = require('./model/User.js');
 
 
 module.exports = Backbone.Router.extend({
+
+
     initialize: function (options) {
+
     },
 
     routes: {
@@ -23,7 +26,8 @@ module.exports = Backbone.Router.extend({
     },
 
     home: function(query, page) {
-        console.log('in home');
+        
+        console.log('indsfsf home');
         // ...
     }
 });
