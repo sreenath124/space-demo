@@ -6,7 +6,7 @@ var sidenavTemp = require('../templates/navbar-template.js');
 
 
 module.exports = Backbone.View.extend({
-
+	el:$('#app'),
 	initialize: function(){
 		this.render();
 	},
@@ -14,6 +14,7 @@ module.exports = Backbone.View.extend({
 	render: function() {
 		var template = _.template(sidenavTemp,{});
 		this.$el.html(template);
+		console.log(this.$el);
 		/*this.$el.html( $('<p>In login</p>') );*/
 		return this;
 	},

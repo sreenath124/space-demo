@@ -43,7 +43,7 @@ module.exports = [
 					'<div class="sidenav-hover-training sidenav-more">',
 						'<span class="menu-parent-item">Training</span>',
 						'<ul>',
-							'<li><a href="#">Training List</a></li>',
+							'<li><a href="#Training">Training List</a></li>',
 						'</ul>',
 					'</div>',
 					'<div class="sidenav-hover-daily-status sidenav-more">',
