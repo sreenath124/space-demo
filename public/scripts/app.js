@@ -9,15 +9,19 @@ var Vacation = require('./model/vacation_model.js');
 window.app = window.app = {};
 
 $(function(){
+
+
 	app.node = $('#app');
 
-
-	app.router = new Router({});
-	Backbone.history.start({pushState: false});
-
 	app.user = new User();
+	
+	app.router = new Router();
+	Backbone.history.start({pushState: false});
 	app.vacation = new Vacation();
+
+	
+	app.router.navigate("/login", {trigger: true, replace: true});
+
 	
 
-	app.router.navigate("/login", {trigger: true, replace: true});
 })

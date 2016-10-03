@@ -2,29 +2,28 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 var _ = require('underscore');
 var router = require('../routes.js');
-var User = require('../model/User.js');
-var loginTemp = require('../templates/login-template.js');
+var sidenavTemp = require('../templates/navbar-template.js');
 
 
 module.exports = Backbone.View.extend({
-
+	el:$('#app'),
 	initialize: function(){
 		this.render();
 	},
 
 	render: function() {
-		var template = _.template(loginTemp,{});
+		var template = _.template(sidenavTemp,{});
 		this.$el.html(template);
+		console.log(this.$el);
 		/*this.$el.html( $('<p>In login</p>') );*/
-
 		return this;
 	},
 
-	events: {
+	/*events: {
 		"click button" : "gotoHome"
-	},
+	},*/
 
-	gotoHome: function(e){
+	/*gotoHome: function(e){
 		var username  = $('#username').val();
 		var password = $('#password').val();
 		console.log(this.model);
@@ -38,7 +37,7 @@ module.exports = Backbone.View.extend({
 			console.log("sad");
 			app.router.navigate("/home", {trigger: true, replace: true});
 		}
-	}
+	}*/
 
 	// logout: function() {
 	// 	this.model.set({
@@ -48,4 +47,3 @@ module.exports = Backbone.View.extend({
 	// 	})
 	// }
 });
-
