@@ -12,9 +12,7 @@ header,footer{
 	width:100px;
 	height: auto;
 }
-#app{
-	padding: .8rem 1rem;
-}
+
 .form-control{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -31,4 +29,105 @@ footer{
 	display: block;
 	margin: 0 auto;
 }
-
+.sidenav{
+	width:auto;
+	min-height: 100%;
+	background-color: #f7f7f7;
+	display: inline-block;
+}
+.sidenav ul{
+	margin-bottom: 0;
+}
+#usericon{
+	width: 40px;
+	height: 48px;
+	margin-left: 5px;
+}
+.userlogo{
+	background-color: white;
+}
+.glyphicon {
+    font-size: 21px;
+    margin-left: 2px;
+    color: #69737A;
+}
+.sidenav-icons{
+	padding: .9rem;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #E6E6E6;
+}
+.sidenav-hover-employees{
+	
+	position: absolute;
+	top: 143px;
+	left: 40px;
+	
+}
+.sidenav-hover-vacation{
+	
+	position: absolute;
+	top: 190px;
+	left: 40px;
+	
+}
+.sidenav-hover-projects{
+	
+	position: absolute;
+	top: 237px;
+	left: 40px;
+	
+}
+.sidenav-hover-address{
+	
+	position: absolute;
+	top: 284px;
+	left: 40px;
+	
+}
+.sidenav-hover-training{
+	
+	position: absolute;
+	top: 331px;
+	left: 40px;
+	
+}
+.sidenav-hover-daily-status{
+	position: absolute;
+	top: 378px;
+	left: 40px;
+	
+}
+.sidenav-more{
+	display: inline-block;
+	width:200px;
+	height: 220px;
+	background-color: white;
+	display: none;
+	box-shadow: 1px 1px 2px 0 rgba(0,0,0,.2);
+	border-left: 1px solid #bfbfbf;
+    border-top: 1px solid #D8D4D4;
+	
+}
+.sidenav-more ul li{
+	list-style: none;
+	padding: 1rem;
+	
+	font-size: 12px;
+}
+.sidenav-more ul li a{
+	text-decoration: none;
+	color: #69737A;
+	cursor: pointer; 
+}
+.menu-parent-item{
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	background-color:#f5f5f5;
+	border-bottom: 1px solid #D8D4D4;
+	padding: 1rem;
+	font-size: 13px;
+}
+.arrow-right{
+	background-color: #D7DAE2;
+}

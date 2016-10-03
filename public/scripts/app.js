@@ -8,6 +8,8 @@ var User = require('./model/User.js');
 window.app = window.app = {};
 
 $(function(){
+
+
 	app.node = $('#app');
 
 	app.user = new User();
@@ -18,4 +20,7 @@ $(function(){
 	
 
 	app.router.navigate("/login", {trigger: true, replace: true});
+
+	
+
 })
