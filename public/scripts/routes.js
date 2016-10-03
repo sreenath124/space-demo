@@ -34,7 +34,6 @@ module.exports = Backbone.Router.extend({
         
         console.log('indsfsf home');
         app.sidenav = new Sidenav();
-        app.node.html(app.sidenav.render().$el);
         $(".employees, .sidenav-hover-employees").mouseover(function(){
             $(".sidenav-hover-employees").show();
         });
@@ -75,9 +74,10 @@ module.exports = Backbone.Router.extend({
 
     },
     Training:function(){
-        var trainInfo = new trainingCollection();
+        app.sidenav = new Sidenav();
+         var trainInfo = new trainingCollection();
         app.trainingList = new Train_list({collection:trainInfo});
-        app.node.html( app.trainingList.render().$el );
+ 
 
 
      

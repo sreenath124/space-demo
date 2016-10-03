@@ -3,7 +3,7 @@
 	padding: 0;
 	}
 
-header,footer{
+#main-header,#main-footer{
 	height: 50px;
 	background-color: #2C3742;
 	box-sizing: border-box;
@@ -17,7 +17,7 @@ header,footer{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
-footer{
+#main-footer{
 	position: fixed;
 	bottom: 0px;
 	left: 0;
@@ -146,6 +146,8 @@ button {
     padding: 20px 0;
     padding-left:10px;
     box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .training-head {
@@ -157,7 +159,7 @@ button {
 
 .training-head h3 {
     display: inline-table;
-    padding:10px;
+    margin:0;
 }
 
 .training-head span {
