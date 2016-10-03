@@ -8,10 +8,13 @@ module.exports = Backbone.View.extend({
 		var template = _.template(tmpl);
 		var trainList = _.template(list);
 		this.$el.html( template );
-
-		return this;
+		this.collection.fetch();
+    console.log(this.collection);
+    return this;
 	}
 
+});
+		
+
+
 	
-	
-})

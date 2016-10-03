@@ -1,6 +1,6 @@
 module.exports = [
-			'<article>',
-			'<header>',
+			'<article class="train-article">',
+			'<header class="train-article-head">',
 			'<a href=""><%=trainingName%></a>',
 			'</header>',
 			'<span>Who: <%=name%></span>',
@@ -8,5 +8,6 @@ module.exports = [
 			'<span>Where: <%=location%></span>',
 			'<span>Seats remaining: <%=seatsNo%></span>',
 			'<span>Training Status: <%=status%></span>',
-			'<button>Attend this training</button>'
+			'<button class="attend_train">Attend this training</button>',
+			'</article>'
 ].join('');

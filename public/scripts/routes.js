@@ -3,7 +3,7 @@ var $ = require('jquery');
 var Train_list = require('./view/Training_list.js');
 var Login = require('./view/Login.js');
 var User = require('./model/User.js');
-
+var trainingCollection = require('./collection/training_collection.js');
 
 module.exports = Backbone.Router.extend({
     initialize: function (options) {
@@ -28,7 +28,8 @@ module.exports = Backbone.Router.extend({
         // ...
     },
     Training:function(){
-        app.trainingList = new Train_list();
+        var trainInfo = new trainingCollection();
+        app.trainingList = new Train_list({collection:trainInfo});
         app.node.html( app.trainingList.render().$el );
 
     }

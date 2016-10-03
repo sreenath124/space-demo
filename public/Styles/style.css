@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+button {
+    color: #fff;
+}
+
+.training-list {
+    width: 90%;
+    padding: 20px 0;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+
+.training-head {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.training-head h3 {
+    display: inline-table;
+    padding:10px;
+}
+
+.training-head span {
+    float: right;
+}
+.training-nav{
+	width:40%;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.training-nav li {
+    display: inline-block;
+}
+
+.training-nav button {
+    border-top-left-radius: 17%;
+    border-top-right-radius: 17%;
+    background-color: #0066A6;
+    outline: none;
+    padding: 6px 8px 3px 7px;
+    border: 1px solid;
+}
+.training-nav button:hover{
+	background-color: #3CB3EE;
+}
+.train-data-section{
+	border:1px solid #3CB3EE;
+    border-top: 5px solid #3CB3EE;
+    margin-top: 1px;
+}
