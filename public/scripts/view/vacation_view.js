@@ -6,7 +6,7 @@ var vacation_collection = require('../collection/vacation_collection.js');
 
 //view_ROw
 module.exports = Backbone.View.extend({
-     tagName: 'li',
+     tagName: 'tr',
      className: 'row',
 
      initialize: function() {
@@ -21,24 +21,23 @@ module.exports = Backbone.View.extend({
              approver_copy= this.model.get('approver_copy'),
              comment = this.model.get('comment');
 
-         var vacation_days,
-             vacation_from,
-             vacation_to,
+         var date_range,
+             vacation_days,
              vacation_type,
              approver,
-             comment;
+             status,
+             remarks;
 
-        vacation_days = '<span> ' +  no_of_days + '</span>';
-         vacation_from = '<span> ' + from + '</span>';
-         vacation_to = '<span> ' + to + '</span>';
-         vacation_type = '<span> ' + type + '</span>';
-         approver = '<span>' + approver + '</span>';
-         approver_copy = '<span>' + approver_copy + '</span>';
-         comment = '<span> ' + comment + '</span>';
+       date_range = '<td>' + from + '-' + to + '</td>';
+       vacation_days ='<td>'+ no_of_days + '</td>';
+         vacation_type = '<td> ' + type + '</td>';
+         approver = '<td>' + approver + '</td>';
+         status = '<td> Pending</td>';
+         remarks = '<td>Not enterd</td>';
 
 
-         this.$el.html(vacation_days + vacation_from + vacation_to + vacation_type + approver +approver_copy + comment);
-
+         this.$el.html(date_range  + vacation_days + vacation_type + approver + status + remarks);
+         console.log(no_of_days);
          return this;
      }
 

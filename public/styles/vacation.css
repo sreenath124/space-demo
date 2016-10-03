@@ -1,0 +1,27 @@
+.container{
+	border : 2px solid #ddd;
+	padding: 2rem;
+}
+.tableHeading{
+	background-color: lightBlue;
+	color: #000;
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+    height: 10px;
+}
+
+.list {
+    border: 1px solid black;
+    text-align: left;
+}
+#days{
+	width: 2rem;
+}
+
+
+#submit{
+	background-color: lightblue;
+	color: #fff;
+}

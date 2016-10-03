@@ -6,6 +6,7 @@ var User = require('./model/User.js');
 var Vacation_collection = require('./collection/vacation_collection.js');
 var Vacation_form = require('./view/vacation_view_form.js');
 var Vacation_requestList = require('./view/vacation_view_ul.js');
+var temp = require('./templates/vacationRequest.js');
 
 module.exports = Backbone.Router.extend({
     initialize: function (options) {
@@ -36,7 +37,7 @@ module.exports = Backbone.Router.extend({
         app.vacList = new Vacation_requestList({collection :app.collection});
         app.vacForm = new Vacation_form({collection : app.collection});       
         app.node.html( app.vacForm.render().$el);
-        app.node.append(app.vacList.render().$el);
+        $('.myHistory').append(app.vacList.render().$el);
  
     }
 });

@@ -10,12 +10,13 @@ window.app = window.app = {};
 
 $(function(){
 	app.node = $('#app');
-	app.history = $('#history');
+
 
 	app.router = new Router({});
 	Backbone.history.start({pushState: false});
 
 	app.user = new User();
+	app.vacation = new Vacation();
 	
 
 	app.router.navigate("/login", {trigger: true, replace: true});

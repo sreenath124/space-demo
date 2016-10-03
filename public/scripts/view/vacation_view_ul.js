@@ -6,7 +6,7 @@ var vacation_collection = require('../collection/vacation_collection.js');
 
 //view_Ul
 module.exports = Backbone.View.extend({
-     tagName: 'ul',
+     tagName: 'table',
      className: 'list',
      initialize: function() {
          this.listenTo(this.collection, "add", this.render);

@@ -1,4 +1,7 @@
 module.exports = [
+
+	'<h3> Request vacation </h3>',
+	'<div class= "container">',
 	'<label>No of Days</label>',
 	'<input type = "text" name = "days" id=days>',
 	'<label>Vacation from</label>',
@@ -13,5 +16,11 @@ module.exports = [
 	'<input type="text" name="Approver" id="approver_copy">',
 	'<label>Comments</label>',
 	'<textarea></textarea>',
-	'<input type= "submit" value="submit">'
+	'<input type= "submit" value="submit" id="submit">',
+	'</div>',
+	'<h4>My History</h4>',
+	'<table class="tableHeading">',
+		'<th><td>Date Range</td><td>#of days</td><td>type of vacation</td><td>Approver</td><td>status</td><td>remarks</td></th>',
+	'</table>',
+	'<div class="myHistory"></div>'
 ].join('');
