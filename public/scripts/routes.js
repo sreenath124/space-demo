@@ -3,10 +3,17 @@ var $ = require('jquery');
 var Train_list = require('./view/Training_list.js');
 var Login = require('./view/Login.js');
 var User = require('./model/User.js');
+
 var trainingCollection = require('./collection/training_collection.js');
 
+var Sidenav = require('./view/sidenav-view.js');
+
+
 module.exports = Backbone.Router.extend({
+
+
     initialize: function (options) {
+
     },
 
     routes: {
@@ -24,13 +31,57 @@ module.exports = Backbone.Router.extend({
     },
 
     home: function(query, page) {
-        console.log('in home');
+        
+        console.log('indsfsf home');
+        app.sidenav = new Sidenav();
+        app.node.html(app.sidenav.render().$el);
+        $(".employees, .sidenav-hover-employees").mouseover(function(){
+            $(".sidenav-hover-employees").show();
+        });
+        $(".employees, .sidenav-hover-employees").mouseout(function(){
+            $(".sidenav-hover-employees").hide();
+        });
+         $(".vacation, .sidenav-hover-vacation").mouseover(function(){
+            $(".sidenav-hover-vacation").show();
+        });
+        $(".vacation, .sidenav-hover-vacation").mouseout(function(){
+            $(".sidenav-hover-vacation").hide();
+        });
+         $(".projects, .sidenav-hover-projects").mouseover(function(){
+            $(".sidenav-hover-projects").show();
+        });
+        $(".projects, .sidenav-hover-projects").mouseout(function(){
+            $(".sidenav-hover-projects").hide();
+        });
+         $(".address, .sidenav-hover-address").mouseover(function(){
+            $(".sidenav-hover-address").show();
+        });
+        $(".address, .sidenav-hover-address").mouseout(function(){
+            $(".sidenav-hover-address").hide();
+        });
+         $(".training, .sidenav-hover-training").mouseover(function(){
+            $(".sidenav-hover-training").show();
+        });
+        $(".training, .sidenav-hover-training").mouseout(function(){
+            $(".sidenav-hover-training").hide();
+        });
+         $(".daily-status, .sidenav-hover-daily-status").mouseover(function(){
+            $(".sidenav-hover-daily-status").show();
+        });
+        $(".daily-status, .sidenav-hover-daily-status").mouseout(function(){
+            $(".sidenav-hover-daily-status").hide();
+        });
         // ...
+
     },
     Training:function(){
         var trainInfo = new trainingCollection();
         app.trainingList = new Train_list({collection:trainInfo});
         app.node.html( app.trainingList.render().$el );
+
+
+     
+        
 
     }
 });
