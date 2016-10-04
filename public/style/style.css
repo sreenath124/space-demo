@@ -194,7 +194,11 @@ button {
 
 /*//sreenath___style*/
 
-
+#vacation_form{
+	display: inline-block;
+	width: 95%;
+	vertical-align: top;
+}
 .formFields{
 	border : 2px solid #ddd;
 	padding: 2rem;

@@ -8,12 +8,13 @@ var templ = require('../templates/vacationRequest.js');
 
 
 module.exports = Backbone.View.extend({
+    el:$('#app'),
     initialize: function() {
-
+        this.render();
     },
     render: function() {
         var template = _.template(templ);
-        this.$el.html(template);
+        this.$el.append(template);
         // console.log("inside form");
         return this;
     },

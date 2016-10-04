@@ -27,7 +27,7 @@ module.exports = Backbone.Router.extend({
         "login": "login",
         "home": "home",
 
-        "vacation_request": "vacation"
+        "vacation_request": "vacation",
 
         "Training": "Training"
     },
@@ -85,11 +85,11 @@ module.exports = Backbone.Router.extend({
 
     vacation: function(query, page){
        // console.log('in vacation');
+       app.sidenav = new Sidenav();
         app.collection = new Vacation_collection();
         app.vacList = new Vacation_requestList({collection :app.collection});
         app.vacForm = new Vacation_form({collection : app.collection});       
-        app.node.html( app.vacForm.render().$el);
-        $('.myHistory').append(app.vacList.render().$el);
+         $('.myHistory').append(app.vacList.render().$el);
 
 
     },

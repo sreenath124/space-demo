@@ -1,5 +1,5 @@
 module.exports = [
-
+	'<section id="vacation_form">',
 	'<h3> Request vacation </h3>',
 	'<div class= "formFields">',
 	'<table><tr>',
@@ -38,5 +38,6 @@ module.exports = [
 	'<table class="tableHeading">',
 		'<th><td>Date Range</td><td>#of days</td><td>type of vacation</td><td>Approver</td><td>status</td><td>remarks</td></th>',
 	'</table>',
-	'<div class="myHistory"></div>'
+	'<div class="myHistory"></div>',
+	'</section>'
 ].join('');
